@@ -1,0 +1,122 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+import { MailIcon, LinkedinIcon, PhoneIcon } from 'astro-feather';
+import { Image } from 'astro:assets';
+import smallLogo from '../assets/logo-48x48.png';
+---
+
+<div id='header-contain'>
+	<div id='header'>
+		<div id='header-left'>
+			<Image
+				src={smallLogo}
+				alt='Julie Looman Logo of a light blue J over a dark blue L.'
+				class='header-logo'
+			/>
+			<p>Julie Looman</p>
+		</div>
+		<div id='header-right'>
+			<a
+				class='header-circle'
+				href='mailto:Julie@Looman.Dev'
+				aria-label='Email me at Julie@Looman.Dev'><MailIcon size={24} /></a
+			>
+			<a
+				class='header-circle'
+				href='tel:304-550-6310'
+				aria-label='Call me at 304-376-4544'><PhoneIcon size={24} /></a
+			>
+			<a
+				class='header-circle'
+				href='https://www.linkedin.com/in/julielooman/'
+				target='_blank'
+				aria-label='Message me on LinkedIn'><LinkedinIcon size={24} /></a
+			>
+		</div>
+	</div>
+</div>
+
+<style>
+	#header-contain {
+		box-sizing: border-box;
+		position: sticky;
+		top: 0px;
+		width: 100vw;
+		width: 100lvw;
+		background-color: rgba(242, 249, 248, 1);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	#header {
+		box-sizing: border-box;
+		max-width: 1920px;
+		width: 100%;
+		display: grid;
+		padding: 24px 0px;
+		grid-template-columns: 1fr auto;
+	}
+	#header-left {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		padding-left: 72px;
+	}
+	.header-logo {
+		padding-right: 24px;
+	}
+	#header-left > p {
+		font-size: 32px;
+		color: rgba(34, 75, 116, 1);
+		/* border-left: 3px solid rgba(34, 75, 116, 1); */
+		margin: 0px;
+	}
+	#header-right {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		gap: 16px;
+		padding-right: 72px;
+	}
+	.header-circle {
+		background-color: rgba(34, 75, 116, 0.9);
+		color: rgba(242, 249, 248, 1);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		height: 48px;
+		width: 48px;
+	}
+	.header-circle:hover {
+		background-color: rgba(34, 75, 116, 1);
+	}
+
+	@media only screen and (max-width: 843px) {
+		#header {
+			padding: 16px 0px;
+		}
+		#header-left {
+			padding-left: 16px;
+			align-items: center;
+			justify-content: center;
+			padding-bottom: 16px;
+		}
+		#header-left > p {
+			font-size: 48px;
+		}
+		#header-right {
+			padding-right: 16px;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+		}
+		#header {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto;
+		}
+	}
+</style>
