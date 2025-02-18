@@ -1,6 +1,4 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
 import { MailIcon, LinkedinIcon, PhoneIcon } from 'astro-feather';
 import { Image } from 'astro:assets';
 import smallLogo from '../assets/logo-48x48.png';
@@ -101,22 +99,17 @@ import smallLogo from '../assets/logo-48x48.png';
 		}
 		#header-left {
 			padding-left: 16px;
-			align-items: center;
-			justify-content: center;
-			padding-bottom: 16px;
 		}
 		#header-left > p {
 			font-size: 48px;
+			display: none;
 		}
 		#header-right {
 			padding-right: 16px;
-			align-items: center;
-			justify-content: center;
 			gap: 8px;
 		}
 		#header {
-			grid-template-columns: 1fr;
-			grid-template-rows: auto auto;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 </style>
