@@ -6,7 +6,7 @@ import smallLogo from '../assets/logo.svg';
 
 <header id='header-contain'>
 	<div id='header'>
-		<div id='header-left'>
+		<a id='header-left' href='/' aria-label='Return to home'>
 			<Image
 				src={smallLogo}
 				alt='Julie Looman Logo of a light blue J over a dark blue L.'
@@ -15,7 +15,7 @@ import smallLogo from '../assets/logo.svg';
 				width='32'
 			/>
 			<p>Julie Looman</p>
-		</div>
+		</a>
 		<div id='header-right'>
 			<a
 				class='header-circle'
@@ -66,6 +66,7 @@ import smallLogo from '../assets/logo.svg';
 		justify-content: flex-start;
 		align-items: center;
 		padding-left: 72px;
+		text-decoration: none;
 	}
 	.header-logo {
 		padding-right: 16px;

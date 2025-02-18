@@ -1,9 +1,128 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Image from 'astro/components/Image.astro';
-import childrens from '../assets/Index-WVUM.webp';
-import terra from '../assets/Index-Terra.webp';
-import wts from '../assets/Index-WTS.webp';
+import top from '../assets/discovery-hero.webp';
+import middle from '../assets/discovery-2.webp';
+import bottom from '../assets/discovery-3.webp';
+import alt from '../assets/Index-WVUM.webp';
 ---
 
-<Layout />
+<Layout>
+	<main>
+		<div id='hero'>
+			<h1>
+				Print Design, <br />Activity Booklet
+			</h1>
+		</div>
+		<div id='text'>
+			<h2>A chance to work and play</h2>
+			<p>
+				This event was to showcase the family of doctors, nurses, and other
+				professionals, all working together to provide the best care possible
+				for all kids. This booklet was used by families to write notes and
+				explore the museum. Prompting them to stop by each booth and learn more.
+				<br /><br />
+				<span class='thin'>WVU Medicine Children's</span>
+			</p>
+		</div>
+		<div id='middle'></div>
+		<div id='bottom'></div>
+	</main>
+</Layout>
+
+<style
+	define:vars={{
+		top: `url(${top.src})`,
+		middle: `url(${middle.src})`,
+		bottom: `url(${bottom.src})`,
+		alt: `url(${alt.src})`,
+	}}
+>
+	main {
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+		max-width: 1920px;
+	}
+	#hero {
+		box-sizing: border-box;
+		grid-column: 1 / span 2;
+		background-image: var(--top);
+		height: 90vh;
+		display: grid;
+		align-items: end;
+		color: #fff;
+		padding: 60px;
+		font-size: 60px;
+		background-size: cover; /* Resize the background image to cover the entire container */
+	}
+	#hero > h1 {
+		font-size: 60px;
+	}
+	#text {
+		font-family: 'Montserrat';
+		color: rgba(0, 114, 187, 1);
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	#text > * {
+		max-width: 400px;
+	}
+	#text > h2 {
+		font-weight: 700;
+	}
+	#text > p {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 30px;
+		letter-spacing: -1.5%;
+	}
+	#text > p > .thin {
+		padding-top: 16px;
+		font-weight: 100;
+		color: rgba(0, 114, 187, 0.8);
+	}
+	#middle {
+		width: 100%;
+		height: 90vh;
+		background-image: var(--middle);
+		height: 90vh;
+		background-size: cover; /* Resize the background image to cover the entire container */
+	}
+	#bottom {
+		grid-column: 1 / span 2;
+		width: 100%;
+		height: 90vh;
+		background-image: var(--bottom);
+		height: 90vh;
+		background-size: cover; /* Resize the background image to cover the entire container */
+	}
+	@media only screen and (max-width: 843px) {
+		main {
+			grid-template-columns: 1fr;
+		}
+		#hero,
+		#bottom {
+			grid-column: 1 / 2;
+			background-position: center; /* Center the image */
+		}
+		#hero {
+			padding: 8px;
+		}
+		#hero > h1 {
+			font-size: 40px;
+		}
+		#text {
+			padding: 32px 48px;
+		}
+		#middle {
+			height: 70vh;
+		}
+		#bottom {
+			height: 40vh;
+		}
+	}
+</style>
