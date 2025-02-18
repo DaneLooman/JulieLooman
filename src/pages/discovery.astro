@@ -14,15 +14,18 @@ import discbottom from '../assets/discovery-3.webp';
 			</h1>
 		</div>
 		<div id='text'>
-			<h2>A chance to work and play</h2>
-			<p>
-				This event was to showcase the family of doctors, nurses, and other
-				professionals, all working together to provide the best care possible
-				for all kids. This booklet was used by families to write notes and
-				explore the museum. Prompting them to stop by each booth and learn more.
-				<br /><br />
-				<span class='thin'>WVU Medicine Children's</span>
-			</p>
+			<div id='text-contain'>
+				<h2>A chance to work and play</h2>
+				<p>
+					This event was to showcase the family of doctors, nurses, and other
+					professionals, all working together to provide the best care possible
+					for all kids. This booklet was used by families to write notes and
+					explore the museum. Prompting them to stop by each booth and learn
+					more.
+					<br /><br />
+					<span class='thin'>WVU Medicine Children's</span>
+				</p>
+			</div>
 		</div>
 		<div id='middle'></div>
 		<div id='bottom'></div>
@@ -59,7 +62,7 @@ import discbottom from '../assets/discovery-3.webp';
 		font-size: 60px;
 	}
 	#text {
-		font-family: 'Montserrat';
+		font-family: 'Verdana';
 		color: rgba(0, 114, 187, 1);
 
 		display: flex;
@@ -70,16 +73,16 @@ import discbottom from '../assets/discovery-3.webp';
 	#text > * {
 		max-width: 400px;
 	}
-	#text > h2 {
+	#text-contain > h2 {
 		font-weight: 700;
 	}
-	#text > p {
+	#text-contain > p {
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 30px;
 		letter-spacing: -1.5%;
 	}
-	#text > p > .thin {
+	#text-contain > p > .thin {
 		padding-top: 16px;
 		font-weight: 100;
 		color: rgba(0, 114, 187, 0.8);

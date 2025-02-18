@@ -15,16 +15,18 @@ import topo from '../assets/Terra-topo.webp';
 			</h1>
 		</div>
 		<div id='text'>
-			<h2>A company not afraid to get their hands dirty.</h2>
-			<p>
-				Terrasearch Geophysical is a specialized geoarchaeology, geophysical,
-				and geochemical experience company. Their technical and field work
-				elements were important to the development of their logo and brand. The
-				brand needed to reflect the history and nature of their work, while not
-				feeling prehistoric.
-				<br /><br />
-				<span class='thin'>Looman Design & Development</span>
-			</p>
+			<div id='text-contain'>
+				<h2>A company not afraid to get their hands dirty.</h2>
+				<p>
+					Terrasearch Geophysical is a specialized geoarchaeology, geophysical,
+					and geochemical experience company. Their technical and field work
+					elements were important to the development of their logo and brand.
+					The brand needed to reflect the history and nature of their work,
+					while not feeling prehistoric.
+					<br /><br />
+					<span class='thin'>Looman Design & Development</span>
+				</p>
+			</div>
 		</div>
 		<div id='middle'></div>
 		<div id='bottom'></div>
@@ -63,9 +65,8 @@ import topo from '../assets/Terra-topo.webp';
 		font-size: 60px;
 	}
 	#text {
-		font-family: 'Montserrat';
+		font-family: 'Verdana';
 		color: rgba(92, 110, 84, 1);
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -76,21 +77,20 @@ import topo from '../assets/Terra-topo.webp';
 	#text > * {
 		max-width: 400px;
 		background-color: rgba(238, 237, 234, 1);
-		padding: 0px 24px;
+		padding: 24px 48px;
 		margin: 0;
 	}
-	#text > h2 {
+	#text-contain > h2 {
 		font-weight: 700;
-		padding: 24px 24px;
 	}
-	#text > p {
+	#text-contain > p {
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 30px;
 		letter-spacing: -1.5%;
 		padding-bottom: 24px;
 	}
-	#text > p > .thin {
+	#text-contain > p > .thin {
 		padding-top: 16px;
 		font-weight: 100;
 		color: rgba(92, 110, 84, 1);
@@ -131,7 +131,10 @@ import topo from '../assets/Terra-topo.webp';
 			-webkit-text-stroke-color: rgba(92, 110, 84, 1);
 		}
 		#text {
-			padding: 32px 48px;
+			padding: 24px;
+		}
+		#text > #text-contain {
+			padding: 8px 24px;
 		}
 	}
 </style>

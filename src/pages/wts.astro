@@ -15,15 +15,17 @@ import alt from '../assets/Index-WTS.webp';
 			</h1>
 		</div>
 		<div id='text'>
-			<h2>We belong among the wildflowers,</h2>
-			<p>
-				Wildflower Therapy Services works with children, adolescents, and adults
-				who are experiencing barriers to living the life they want to live. This
-				brand design was hand crafted for a growing practice that helps you
-				navigate a path forward.
-				<br /><br />
-				<span class='thin'>Looman Design & Development</span>
-			</p>
+			<div id='text-contain'>
+				<h2>We belong among the wildflowers,</h2>
+				<p>
+					Wildflower Therapy Services works with children, adolescents, and
+					adults who are experiencing barriers to living the life they want to
+					live. This brand design was hand crafted for a growing practice that
+					helps you navigate a path forward.
+					<br /><br />
+					<span class='thin'>Looman Design & Development</span>
+				</p>
+			</div>
 		</div>
 		<div id='middle'></div>
 		<div id='bottom'></div>
@@ -62,7 +64,7 @@ import alt from '../assets/Index-WTS.webp';
 		font-size: 60px;
 	}
 	#text {
-		font-family: 'Montserrat';
+		font-family: 'Verdana';
 		color: rgba(117, 173, 130, 1);
 		display: flex;
 		flex-direction: column;
@@ -72,16 +74,16 @@ import alt from '../assets/Index-WTS.webp';
 	#text > * {
 		max-width: 400px;
 	}
-	#text > h2 {
+	#text-contain > h2 {
 		font-weight: 700;
 	}
-	#text > p {
+	#text-contain > p {
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 30px;
 		letter-spacing: -1.5%;
 	}
-	#text > p > .thin {
+	#text-contain > p > .thin {
 		padding-top: 16px;
 		font-weight: 100;
 		color: rgba(117, 173, 130, 1);
