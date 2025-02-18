@@ -1,5 +1,7 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import logo from '../assets/logo.svg';
 ---
 
 <!doctype html>
@@ -8,11 +10,13 @@ import Header from '../components/Header.astro';
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width' />
 		<meta name='generator' content={Astro.generator} />
+		<link rel='icon' href='/logo.svg' sizes='any' type='image/svg+xml' />
 		<title>Julie Looman | Graphic Designer</title>
 	</head>
 	<body>
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
