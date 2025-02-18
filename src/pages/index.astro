@@ -1,8 +1,94 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Image from 'astro/components/Image.astro';
+import childrens from '../assets/Index-WVUM.webp';
+import terra from '../assets/Index-Terra.webp';
+import wts from '../assets/Index-WTS.webp';
+import discovery from '../assets/Index-Discovery.webp';
 ---
 
-<Layout />
+<Layout>
+	<div id='main'>
+		<a class='hero-contain' href='/childrens'>
+			<Image
+				src={childrens}
+				alt='Coloring Books at WVU Medicine Childrens'
+				class='hero-image'
+			/>
+			<p class='hero-title'>
+				Surgery Day at <br />WVU Medicine<br />Children's Hospital
+			</p>
+		</a>
+		<a class='hero-contain' href='/terrasearch'>
+			<Image
+				src={terra}
+				class='hero-image'
+				alt='Terrasearch logo on a building'
+			/>
+			<p class='hero-title'>Terrasearch Geophysical</p>
+		</a>
+		<a class='hero-contain' href='/wts'>
+			<Image
+				src={wts}
+				alt='wildflower therapy services logo on cups'
+				class='hero-image'
+			/>
+			<p class='hero-title'>Wildflower Therapy Services</p>
+		</a>
+		<a class='hero-contain' href='/discovery'>
+			<Image
+				src={discovery}
+				alt='Explorer guide for WVU Medicine Childrens'
+				class='hero-image'
+			/>
+			<p class='hero-title'>
+				WVU Medicine Children's<br />
+				Day at Discovery World
+			</p>
+		</a>
+	</div>
+</Layout>
+
+<style>
+	#main {
+		padding: 16px;
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 16px;
+	}
+	.hero-contain {
+		width: 100%;
+		position: relative;
+	}
+	.hero-image {
+		width: 100%;
+		height: auto;
+		aspect-ratio: auto;
+		transition: opacity 0.3s linear;
+	}
+	.hero-title {
+		position: absolute;
+		top: 50%; /* position the top  edge of the element at the middle of the parent */
+		left: 50%; /* position the left edge of the element at the middle of the parent */
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		text-align: center;
+		color: rgba(34, 75, 116, 1);
+		font-size: 40px;
+		margin: 0px;
+	}
+	.hero-contain:hover > .hero-image {
+		opacity: 0;
+		transition: opacity 0.3s linear;
+		cursor: pointer;
+	}
+	@media only screen and (max-width: 843px) {
+		#main {
+			grid-template-columns: 1fr;
+		}
+		.hero-title {
+			display: none;
+		}
+	}
+</style>
