@@ -1,9 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import top from '../assets/discovery-hero.webp';
-import middle from '../assets/discovery-book.webp';
-import bottom from '../assets/discovery-3.webp';
-import alt from '../assets/Index-WVUM.webp';
+import disctop from '../assets/discovery-hero.webp';
+import discmiddle from '../assets/discovery-book.webp';
+import discbottom from '../assets/discovery-3.webp';
 ---
 
 <Layout>
@@ -32,10 +31,9 @@ import alt from '../assets/Index-WVUM.webp';
 
 <style
 	define:vars={{
-		top: `url(${top.src})`,
-		middle: `url(${middle.src})`,
-		bottom: `url(${bottom.src})`,
-		alt: `url(${alt.src})`,
+		disctop: `url(${disctop.src})`,
+		discmiddle: `url(${discmiddle.src})`,
+		discbottom: `url(${discbottom.src})`,
 	}}
 >
 	main {
@@ -48,7 +46,7 @@ import alt from '../assets/Index-WVUM.webp';
 	#hero {
 		box-sizing: border-box;
 		grid-column: 1 / span 2;
-		background-image: var(--top);
+		background-image: var(--disctop);
 		height: 90vh;
 		display: grid;
 		align-items: end;
@@ -89,7 +87,7 @@ import alt from '../assets/Index-WVUM.webp';
 	#middle {
 		width: 100%;
 		height: 90vh;
-		background-image: var(--middle);
+		background-image: var(--discmiddle);
 		height: 90vh;
 		background-size: cover; /* Resize the background image to cover the entire container */
 	}
@@ -97,7 +95,7 @@ import alt from '../assets/Index-WVUM.webp';
 		grid-column: 1 / span 2;
 		width: 100%;
 		height: 90vh;
-		background-image: var(--bottom);
+		background-image: var(--discbottom);
 		height: 90vh;
 		background-size: cover; /* Resize the background image to cover the entire container */
 	}
