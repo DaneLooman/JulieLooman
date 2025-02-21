@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import top from '../assets/Mailbox-hero.webp';
+import middle from '../assets/Mailbox-specs.webp';
+import bottom from '../assets/Mailbox-closeup.webp';
+---
+
+<Layout>
+	<main>
+		<div id='hero'>
+			<h1>Wrap Design</h1>
+		</div>
+		<div id='text'>
+			<div id='text-contain'>
+				<h2>Unique forms of giving, <br />calls for a unique design.</h2>
+				<p>
+					The children's wrap design for a donated hand built mailbox dedicated
+					to donations is both playful and heartwarming. Bright, cheerful colors
+					like sky blues, and vibrant greens are used to catch the eye, while
+					fun, child-friendly illustrations—such as the smiling “critters” of
+					each floor—help create a welcoming atmosphere. The wrap is made from
+					durable, weatherproof material to ensure that it holds up against the
+					elements, while the overall look is uplifting and positive,
+					encouraging both children and adults to participate in the donation
+					process with joy and enthusiasm.
+					<br /><br />
+					<span class='thin'>WVU Medicine Childrens</span>
+				</p>
+			</div>
+		</div>
+		<div id='middle'></div>
+		<div id='bottom'></div>
+	</main>
+</Layout>
+
+<style
+	define:vars={{
+		top: `url(${top.src})`,
+		middle: `url(${middle.src})`,
+		bottom: `url(${bottom.src})`,
+	}}
+>
+	main {
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+		max-width: 1920px;
+	}
+	#hero {
+		box-sizing: border-box;
+		grid-column: 1 / span 2;
+		background-image: var(--top);
+		height: 90vh;
+		display: grid;
+		align-items: end;
+		color: #fff;
+		padding: 60px;
+		font-size: 60px;
+		background-position: center; /* Center the image */
+		background-size: cover; /* Resize the background image to cover the entire container */
+	}
+	#hero > h1 {
+		font-size: 60px;
+	}
+	#text {
+		font-family: 'Verdana';
+		color: rgba(127, 153, 217, 1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	#text > * {
+		max-width: 500px;
+	}
+	#text-contain > h2 {
+		font-weight: 700;
+	}
+	#text-contain > p {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 30px;
+		letter-spacing: -1.5%;
+	}
+	#text-contain > p > .thin {
+		padding-top: 16px;
+		font-weight: 100;
+		color: rgba(127, 153, 217, 1);
+	}
+	#middle {
+		width: 100%;
+		height: 90vh;
+		background-image: var(--middle);
+		height: 90vh;
+		background-size: cover; /* Resize the background image to cover the entire container */
+	}
+	#bottom {
+		grid-column: 1 / span 2;
+		width: 100%;
+		height: 90vh;
+		background-image: var(--bottom);
+		height: 90vh;
+		background-size: cover; /* Resize the background image to cover the entire container */
+	}
+	@media only screen and (max-width: 1000px) {
+		main {
+			grid-template-columns: 1fr;
+		}
+		#hero,
+		#bottom {
+			grid-column: 1 / 2;
+			background-size: cover;
+		}
+		#hero {
+			padding: 8px;
+			background-position: fixed;
+			background-position: 70% 50%;
+		}
+		#hero > h1 {
+			font-size: 40px;
+			stroke-width: 2px;
+			-webkit-text-stroke-width: 2px;
+			-webkit-text-stroke-color: #76a6a3;
+		}
+		#text {
+			padding: 32px 48px;
+		}
+		#middle,
+		#bottom {
+			height: 50vh;
+		}
+	}
+</style>

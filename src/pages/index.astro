@@ -5,6 +5,8 @@ import childrens from '../assets/Index-WVUM.webp';
 import terra from '../assets/Index-Terra.webp';
 import wts from '../assets/Index-WTS.webp';
 import discovery from '../assets/Index-Discovery.webp';
+import anchor from '../assets/Index-anchor.webp';
+import box from '../assets/Index-mailbox.webp';
 ---
 
 <Layout>
@@ -46,6 +48,25 @@ import discovery from '../assets/Index-Discovery.webp';
 				Day at Discovery World
 			</p>
 		</a>
+		<a class='hero-contain' href='/anchor'>
+			<Image
+				src={anchor}
+				alt='Anchor and Anvil logo on coffe cup'
+				class='hero-image'
+			/>
+			<p class='hero-title'>Anchor and Anvil Coffee</p>
+		</a>
+		<a class='hero-contain' href='/mailbox'>
+			<Image
+				src={box}
+				alt='Mail drop box wrapped in fun colors and designs.'
+				class='hero-image'
+			/>
+			<p class='hero-title'>
+				Children's Miracle Network<br />
+				Donation Box
+			</p>
+		</a>
 	</div>
 </Layout>
 
@@ -64,7 +85,7 @@ import discovery from '../assets/Index-Discovery.webp';
 	.hero-image {
 		width: 100%;
 		height: auto;
-		aspect-ratio: auto;
+		aspect-ratio: 24 / 19;
 		transition: opacity 0.3s linear;
 	}
 	.hero-title {
